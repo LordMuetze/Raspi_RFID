@@ -29,7 +29,8 @@ while True:
         # Select the scanned tag
         Kartenleser.MFRC522_SelectTag(uid)
         # Authenticate
-        status = Kartenleser.MFRC522_Auth(Kartenleser.PICC_AUTHENT1A, 8, key, uid)
+        #status = Kartenleser.MFRC522_Auth(Kartenleser.PICC_AUTHENT1A, 8, key, uid)
+        status = Kartenleser.MFRC522_Auth()
         print("\n"+str(status))
         # Check if authenticated
         if status == Kartenleser.MI_OK:
