@@ -31,8 +31,7 @@ def check(UID=[]):
         # Get the UID of the card
         (status,uid_raw) = Kartenleser.MFRC522_Anticoll()
         print(uid_raw)
-        uid = str(uid_raw[0])+str(uid_raw[1])+str(uid_raw[2])+str(uid_raw[3])+str(uid_raw[4])
-        uid = int(uid)
+        uid = int(str(uid_raw[0])+str(uid_raw[1])+str(uid_raw[2])+str(uid_raw[3])+str(uid_raw[4]))
         print("\n\n")
         print(uid)
         print("\n\n")
