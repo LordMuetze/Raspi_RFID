@@ -12,7 +12,7 @@ def sample_func(sample_var):
 # ...
  
 MIFAREReader = MFRC522.MFRC522()
-authcode = [114, 97, 115, 112, 98, 101, 114, 114, 121] # die ersten 9 Ziffern sind der Authentifizierungscode
+authcode = [0, 0, 0, 0, 0, 0, 0, 0, 0] # die ersten 9 Ziffern sind der Authentifizierungscode
  
 try:
     while True:
