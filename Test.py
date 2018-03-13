@@ -7,5 +7,4 @@ while True:
         print("Herein spaziert!")
     if zugang == False:
         print("Zugang verweigert")
-    sleep(0.5)
-
+    sleep(0.2)
