@@ -6,7 +6,7 @@ import MFRC522
 
 Kartenleser = MFRC522.MFRC522()
 
-def read(authcode):
+def read():
         # Scan for cards    
     (status,TagType) = Kartenleser.MFRC522_Request(Kartenleser.PICC_REQIDL)
 
