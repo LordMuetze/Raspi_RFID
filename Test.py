@@ -24,6 +24,7 @@ while True:
     if status == Kartenleser.MI_OK:
         # Get the UID of the card
         (status,uid) = Kartenleser.MFRC522_Anticoll()
+        print(uid)
         # This is the default key for authentication
         key = [0xFF,0xFF,0xFF,0xFF,0xFF,0xFF]
         # Select the scanned tag
