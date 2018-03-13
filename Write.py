@@ -57,7 +57,7 @@ while continue_reading:
 
             # Fill the data with 0xFF
             for x in range(0,16):
-                data.append(0xFF)
+                data.append(x)
 
             print "Sector 8 looked like this:"
             # Read block 8
