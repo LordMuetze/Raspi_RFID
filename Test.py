@@ -1,4 +1,5 @@
 import RFID
+from time import sleep
 
 while True:
     zugang = RFID.check()
