@@ -21,10 +21,6 @@ signal.signal(signal.SIGINT, end_read)
 # Create an object of the class MFRC522
 MIFAREReader = MFRC522.MFRC522()
 
-# Welcome message
-print "Welcome to the MFRC522 data read example"
-print "Press Ctrl-C to stop."
-
 # This loop keeps checking for chips. If one is near it will get the UID and authenticate
 while continue_reading:
     
@@ -42,7 +38,7 @@ while continue_reading:
     if status == MIFAREReader.MI_OK:
 
         # Print UID
-        print "Card read UID: "+str(uid[0])+","+str(uid[1])+","+str(uid[2])+","+str(uid[3])
+        print "UID: "+str(uid[0])+str(uid[1])+str(uid[2])+str(uid[3])
     
         # This is the default key for authentication
         key = [0xFF,0xFF,0xFF,0xFF,0xFF,0xFF]
