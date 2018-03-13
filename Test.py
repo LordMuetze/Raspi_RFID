@@ -1,5 +1,5 @@
 import RFID
 
 while True:
-    RFID.read()
+    print(RFID.check())
 
