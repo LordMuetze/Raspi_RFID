@@ -11,29 +11,29 @@ def sample_func(sample_var):
  
 # ...
  
-MIFAREReader = MFRC522.MFRC522()
+Kartenleser = MFRC522.MFRC522()
 authcode = [0, 0, 0, 0, 0, 0, 0, 0, 0] # die ersten 9 Ziffern sind der Authentifizierungscode
  
 try:
     while True:
         # Scan for cards    
-        (status,TagType) = MIFAREReader.MFRC522_Request(MIFAREReader.PICC_REQIDL)
+        (status,TagType) = Kartenleser.MFRC522_Request(Kartenleser.PICC_REQIDL)
  
         # If a card is found
-        if status == MIFAREReader.MI_OK:
+        if status == Kartenleser.MI_OK:
             # Get the UID of the card
-            (status,uid) = MIFAREReader.MFRC522_Anticoll()
+            (status,uid) = Kartenleser.MFRC522_Anticoll()
             # This is the default key for authentication
             key = [0xFF,0xFF,0xFF,0xFF,0xFF,0xFF]
             # Select the scanned tag
-            MIFAREReader.MFRC522_SelectTag(uid)
+            Kartenleser.MFRC522_SelectTag(uid)
             # Authenticate
-            status = MIFAREReader.MFRC522_Auth(MIFAREReader.PICC_AUTHENT1A, 8, key, uid)
+            status = Kartenleser.MFRC522_Auth(Kartenleser.PICC_AUTHENT1A, 8, key, uid)
             print("\n"+str(status))
             # Check if authenticated
-            if status == MIFAREReader.MI_OK:
+            if status == Kartenleser.MI_OK:
                 # Read block 8
-                data = MIFAREReader.MFRC522_Read(8)
+                data = Kartenleser.MFRC522_Read(8)
                 print (data)
                 if data[:9] == authcode:
                     sample_func("\n"+str(data))
