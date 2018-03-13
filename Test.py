@@ -51,7 +51,7 @@ while continue_reading:
 
         # Check if authenticated
         if status == Kartenleser.MI_OK:
-            print(Kartenleser.MFRC522_Read(32))
+            print(Kartenleser.MFRC522_Read())
             Kartenleser.MFRC522_StopCrypto1()
         
         sleep(2)
