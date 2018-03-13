@@ -15,7 +15,6 @@ def read():
 
         # Get the UID of the card
         (status,uid_raw) = Kartenleser.MFRC522_Anticoll()
-        print(uid_raw)
         uid = int(str(uid_raw[0])+str(uid_raw[1])+str(uid_raw[2])+str(uid_raw[3])+str(uid_raw[4]))
         print("\n----------------------------------------\n")
         print(uid)
@@ -30,10 +29,9 @@ def check(UID=[]):
 
         # Get the UID of the card
         (status,uid_raw) = Kartenleser.MFRC522_Anticoll()
-        print(uid_raw)
         uid = int(str(uid_raw[0])+str(uid_raw[1])+str(uid_raw[2])+str(uid_raw[3])+str(uid_raw[4]))
         print("\n----------------------------------------\n")
         print(uid)
-        print(uid in UID)
+        print("Permitted: " + str(uid in UID))
         print("\n----------------------------------------\n")
         return uid in UID
