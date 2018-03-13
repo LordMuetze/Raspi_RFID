@@ -21,4 +21,4 @@ def read():
         print(uid)
         print("\n\n")
         return uid
-        sleep(1)
+        sleep(5)
