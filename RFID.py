@@ -35,4 +35,6 @@ def check(UID=[]):
         print("\n\n")
         print(uid)
         print("\n\n")
+        print (uid)
+        print(UID)
         return uid in UID

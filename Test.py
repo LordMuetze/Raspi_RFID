@@ -3,7 +3,7 @@ from time import sleep
 
 while True:
     zugang = RFID.check([128234125162181])
-    if zugang:
+    if zugang == True:
         print("Herein spaziert!")
     if zugang == False:
         print("Zugang verweigert")
