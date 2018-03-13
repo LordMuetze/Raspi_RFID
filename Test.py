@@ -5,7 +5,7 @@ while True:
     zugang = RFID.check()
     if zugang:
         print("Herein spaziert!")
-    if not zugang:
+    if zugang == False:
         print("Zugang verweigert")
     sleep(0.5)
 
