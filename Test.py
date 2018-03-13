@@ -2,7 +2,7 @@ import RFID
 from time import sleep
 
 while True:
-    zugang = RFID.check()
+    zugang = RFID.check([128234125162181])
     if zugang:
         print("Herein spaziert!")
     if zugang == False:

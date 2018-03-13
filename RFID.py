@@ -22,7 +22,7 @@ def read():
         print("\n\n")
         return uid
 
-def check(UID=[128234125162181]):
+def check(UID=[]):
         # Scan for cards    
     (status, TagType) = Kartenleser.MFRC522_Request(Kartenleser.PICC_REQIDL)
     # If a card is found
