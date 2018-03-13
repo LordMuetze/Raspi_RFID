@@ -15,7 +15,8 @@ def read():
     if status == Kartenleser.MI_OK:
 
         # Get the UID of the card
-        (status,uid) = Kartenleser.MFRC522_Anticoll()
+        (status,uid_raw) = Kartenleser.MFRC522_Anticoll()
+        uid = str(uid_raw[0])+str(uid_raw[1])+str(uid_raw[2])+str(uid_raw[3])+str(uid_raw[4])+str(uid_raw[5]))
         print("\n\n")
         print(status)
         print(uid)
