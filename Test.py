@@ -16,6 +16,9 @@ authcode = [0, 0, 0, 0, 0, 0, 0, 0, 0] # die ersten 9 Ziffern sind der Authentif
  
 try:
     while True:
+        
+        print("\n\nScan gestartet\n")
+
         # Scan for cards    
         (status,TagType) = Kartenleser.MFRC522_Request(Kartenleser.PICC_REQIDL)
  
@@ -38,7 +41,7 @@ try:
                 if data[:9] == authcode:
                     sample_func("\n"+str(data))
                 #elif ...
- 
+print("\n\nScan beendet\n") 
 except KeyboardInterrupt:
     print("Abbruch")
     GPIO.cleanup()
