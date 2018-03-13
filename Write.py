@@ -64,7 +64,7 @@ while continue_reading:
             MIFAREReader.MFRC522_Read(8)
             print "\n"
 
-            print "Sector 8 will now be filled with 0xFF:"
+            print "Sector 8 will now be filled with "+str(data)
             # Write the data
             MIFAREReader.MFRC522_Write(8, data)
             print "\n"
@@ -77,9 +77,9 @@ while continue_reading:
             data = []
             # Fill the data with 0x00
             for x in range(0,16):
-                data.append(0x00)
+                data.append(x)
 
-            print "Now we fill it with 0x00:"
+            print "Now we fill it with "+str(data)
             MIFAREReader.MFRC522_Write(8, data)
             print "\n"
 
