@@ -33,6 +33,7 @@ try:
             if status == MIFAREReader.MI_OK:
                 # Read block 8
                 data = MIFAREReader.MFRC522_Read(8)
+                print (data)
                 if data[:9] == authcode:
                     sample_func(data)
                 #elif ...
