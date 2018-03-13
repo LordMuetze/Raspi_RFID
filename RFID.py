@@ -3,6 +3,7 @@
  
 import RPi.GPIO as GPIO
 import MFRC522
+from time import sleep
 
 Kartenleser = MFRC522.MFRC522()
 
@@ -20,3 +21,4 @@ def read():
         print(uid)
         print("\n\n")
         return uid
+        sleep(1)
