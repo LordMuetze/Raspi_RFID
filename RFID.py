@@ -16,9 +16,9 @@ def read():
 
         # Get the UID of the card
         (status,uid) = Kartenleser.MFRC522_Anticoll()
+        return uid
         print("\n\n")
         print(status)
         print(uid)
         print("\n\n")
-        return uid
-    sleep(2)
+        sleep(2)
