@@ -4,6 +4,7 @@
 import RPi.GPIO as GPIO
 import MFRC522
 import signal
+from time import *
 
 continue_reading = True
 
@@ -58,4 +59,6 @@ while continue_reading:
             MIFAREReader.MFRC522_StopCrypto1()
         else:
             print "Authentication error"
+        
+        sleep(2)
 
