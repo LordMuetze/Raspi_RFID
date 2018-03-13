@@ -8,8 +8,8 @@ Kartenleser = MFRC522.MFRC522()
 
 def read():
         # Scan for cards    
-    (status,TagType) = Kartenleser.MFRC522_Request(Kartenleser.PICC_REQIDL)
-    print (TagType)
+    (status) = Kartenleser.MFRC522_Request(Kartenleser.PICC_REQIDL)
+
     # If a card is found
     if status == Kartenleser.MI_OK:
 
@@ -17,7 +17,7 @@ def read():
         (status,uid) = Kartenleser.MFRC522_Anticoll()
         print("\n\n")
         print(status)
-        print(TagType)
+
         print(uid)
         print("\n\n")
         return uid
