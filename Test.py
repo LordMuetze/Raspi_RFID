@@ -33,10 +33,10 @@ while True:
 
         #print("\n"+str(status))
         # Check if authenticated
-    if status == Kartenleser.MI_OK:
+        #if status == Kartenleser.MI_OK:
         # Read block 8
-        data = Kartenleser.MFRC522_Read(8)
-        print (data)
-        if data[:9] == authcode:
-            sample_func("\n"+str(data))
+    data = Kartenleser.MFRC522_Read(8)
+    print (data)
+    if data[:9] == authcode:
+        sample_func("\n"+str(data))
             #elif ...
