@@ -33,7 +33,6 @@ def check(UID=[]):
         (status,uid) = Kartenleser.MFRC522_Anticoll()
         uid = str(uid[0])+str(uid[1])+str(uid[2])+str(uid[3])+str(uid[4])+str(uid[5])
         print("\n\n")
-        print(status)
         print(uid)
         print("\n\n")
         return uid in UID
