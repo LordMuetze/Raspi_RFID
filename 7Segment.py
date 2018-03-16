@@ -59,9 +59,9 @@ def zahl(zahl):
 
     if 0 <= abs(zahl) < 10:
         zahl_str = "00" + zahl_str
-    elif zahl 10 <= abs(zahl) < 100:
+    elif 10 <= abs(zahl) < 100:
         zahl_str = "0" + zahl_str
-    elif zahl 100 <= abs(zahl) < 1000:
+    elif 100 <= abs(zahl) < 1000:
         pass
     else:
         print("ERROR")
