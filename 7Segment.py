@@ -57,11 +57,27 @@ def aus():
 def zahl(zahl):
     zahl_str = str(zahl)
 
+    if abs(zahl) 0 <= zahl < 10:
+        zahl_str = "00" + zahl_str
+    elif zahl 10 <= zahl < 100:
+        zahl_str = "0" + zahl_str
+    elif zahl 100 <= zahl < 1000:
+        pass
+    else:
+        print("ERROR")
+    
+    if zahl < 0:
+        zahl_str = "-" + zahl_str
+    else:
+        zahl_str = "0" + zahl_str
+    
+    print(zahl_str)
+
 #    for ch in zahl_str:
         
-while True:
-    for i in range(1,5):
-        an(i,i)
-        aus()
+# while True:
+#     for i in range(1,5):
+#         an(i,i)
+#         aus()
 
-GPIO.cleanup()
+# GPIO.cleanup()
