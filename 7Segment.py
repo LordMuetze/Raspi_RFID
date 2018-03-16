@@ -52,7 +52,7 @@ def aus():
 zeit1 = time()
 zeit2 = time()
 
-while zeit2 - zeit1 <= 30:
+while True:
         
     for digit in digits:
         GPIO.output(digit,GPIO.LOW)
@@ -62,10 +62,7 @@ while zeit2 - zeit1 <= 30:
         else:
             an(0)
             aus()     
-        GPIO.output(digit,GPIO.HIGH)
+        GPIO.output(digit,GPIO.HIGH) 
 
-        sleep(0.1)
-    
-    zeit2 = time()
 
 GPIO.cleanup()
