@@ -12,7 +12,6 @@ liste_6 = [1,2,4,5,7,8]
 liste_7 = [4,6,8]
 liste_8 = [1,2,4,5,6,7,8]
 liste_9 = [2,4,5,6,7,8]
-liste_- = [5]
 
 
 
@@ -41,7 +40,6 @@ def an(nummer,anzeige=1):
     global liste_7
     global liste_8
     global liste_9
-    global liste_-
     global test
 
     print("digits[anzeige-1]"+str(digits[anzeige-1]))
@@ -57,21 +55,17 @@ def aus():
         GPIO.output(digit,GPIO.HIGH)
 
 def zahl(zahl):
-    zahl_str = str(zahl)
+    zahl_str = str(abs(zahl))
 
     if 0 <= abs(zahl) < 10:
-        zahl_str = "00" + zahl_str
+        zahl_str = "000" + zahl_str
     elif 10 <= abs(zahl) < 100:
-        zahl_str = "0" + zahl_str
+        zahl_str = "00" + zahl_str
     elif 100 <= abs(zahl) < 1000:
-        pass
-    else:
-        print("ERROR")
-    
-    if zahl < 0:
-        zahl_str = "-" + zahl_str
-    else:
         zahl_str = "0" + zahl_str
+    else:
+        pass
+
     print("zahl_str:\t"+zahl_str)
     i = 1
     for ch in zahl_str:
@@ -84,7 +78,7 @@ def zahl(zahl):
 zeit1 = time()
 zeit2 = time()        
 while zeit2 - zeit1 < 10:
-    zahl(-123)
+    zahl()
     zeit2 = time()
 
 GPIO.cleanup()
