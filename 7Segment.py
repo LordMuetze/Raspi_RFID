@@ -54,17 +54,19 @@ def aus():
     for digit in digits:
         GPIO.output(digit,GPIO.HIGH)
 
-def zahl(zahl>=0):
+def zahl(zahl):
     zahl_str = str(abs(zahl))
 
-    if 0 <= abs(zahl) < 10:
+    if 0 <= zahl < 10:
         zahl_str = "000" + zahl_str
-    elif 10 <= abs(zahl) < 100:
+    elif 10 <= zahl < 100:
         zahl_str = "00" + zahl_str
-    elif 100 <= abs(zahl) < 1000:
+    elif 100 <= zahl < 1000:
         zahl_str = "0" + zahl_str
-    else:
+    elif 1000 <= zahl < 10000:
         pass
+    else:
+        print("Sorry, diese Zahl kann nicht angezeigt werden")
 
     print("zahl_str:\t"+zahl_str)
     i = 1
@@ -73,6 +75,3 @@ def zahl(zahl>=0):
         an(ch,i)
         aus()
         i += 1
-
-while True:
-    zahl(-123)
