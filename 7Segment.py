@@ -29,6 +29,7 @@ for digit in digits:
 
 def an(nummer,anzeige=1):
     global segments
+    global digits
     global liste_0
     global liste_1
     global liste_2
@@ -43,7 +44,7 @@ def an(nummer,anzeige=1):
 
     GPIO.output(anzeige-1,GPIO.LOW)
     exec("for index in liste_"+str(nummer)+": real_index = index-1; GPIO.output(segments[real_index],GPIO.HIGH)")
-    GPIO.output(anzeige-1,GPIO.HIGH)        
+    GPIO.output(digits[anzeige-1],GPIO.HIGH)        
 
 def aus():
     global segments
