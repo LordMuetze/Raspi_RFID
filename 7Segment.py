@@ -2,17 +2,17 @@
 from time import sleep
 import RPi.GPIO as GPIO
 
-null = [11,7,4,2,1,10]
-eins = [4,7]
-zwei = [11,7,5,1,2]
-drei = [11,7,5,4,2]
-vier = [10,5,7,4]
-fuenf = [11,10,5,4,2]
-sechs = [11,10,1,2,4,5]
-sieben = [11,7,4]
-acht = [11,7,4,2,1,5,10]
-neun = [10,11,7,5,4,2]
-test = [1,2,3,4,5,7,10,11]
+null = [1,2,4,6,7,8]
+eins = [4,6]
+zwei = [1,2,5,6,8]
+drei = [2,4,5,6,8]
+vier = [4,5,6,7]
+fuenf = [2,4,5,7,8]
+sechs = [1,2,4,5,7,8]
+sieben = [4,6,8]
+acht = [1,2,4,5,6,7,8]
+neun = [2,4,5,6,7,8]
+punkt = [3]
 
 
 
