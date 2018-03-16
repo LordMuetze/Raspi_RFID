@@ -76,12 +76,12 @@ def zahl(zahl):
         an(ch,i)
         aus()
         i += 1
-        
-#    for ch in zahl_str:
-        
-# while True:
-#     for i in range(1,5):
-#         an(i,i)
-#         aus()
 
-# GPIO.cleanup()
+#    for ch in zahl_str:
+zeit1 = time()
+zeit2 = time()        
+while zeit2 - zeit1 < 10:
+    zahl(1234)
+    zeit2 = time()
+
+ GPIO.cleanup()
