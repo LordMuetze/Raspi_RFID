@@ -24,6 +24,7 @@ for segment in segments:
 digits = [16,12,10,8]
 for digit in digits:
     GPIO.setup(digit, GPIO.OUT)
+    GPIO.output(digit,GPIO.HIGH)
 
 
 def an(nummer):
@@ -48,13 +49,13 @@ def aus():
     for segment in segments:
         GPIO.output(segment,GPIO.LOW)
 
-while True:
-    for digit in digits:
-        GPIO.output(digit,GPIO.LOW)
-        for i in range(0,10):
-            an(i)
-            sleep(0.5)
-            aus()        
-        GPIO.output(digit,GPIO.HIGH)
+for digit in digits:
+    GPIO.output(digit,GPIO.LOW)
+    for i in range(0,10):
+        an(i)
+        sleep(0.5)
+        aus()        
+    GPIO.output(digit,GPIO.HIGH)
 
-        GPIO.cleanup()
+GPIO.cleanup()
+
