@@ -58,7 +58,7 @@ def zahl(zahl):
         
 
 an(8,2)
-sleep(2)
+sleep(5)
 aus()
 
 GPIO.cleanup()
