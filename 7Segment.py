@@ -54,7 +54,7 @@ def aus():
     for digit in digits:
         GPIO.output(digit,GPIO.HIGH)
 
-def zahl(zahl):
+def zahl(zahl>=0):
     zahl_str = str(abs(zahl))
 
     if 0 <= abs(zahl) < 10:
@@ -74,11 +74,5 @@ def zahl(zahl):
         aus()
         i += 1
 
-#    for ch in zahl_str:
-zeit1 = time()
-zeit2 = time()        
-while zeit2 - zeit1 < 10:
-    zahl()
-    zeit2 = time()
-
-GPIO.cleanup()
+while True:
+    zahl(-123)
