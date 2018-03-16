@@ -53,7 +53,7 @@ while True:
         GPIO.output(digit,GPIO.LOW)
         for i in range(0,10):
             an(i)
-            sleep(2)
+            sleep(0.5)
             aus()        
         GPIO.output(digit,GPIO.HIGH)
 
