@@ -58,11 +58,13 @@ while zeit2 - zeit1 <= 30:
         GPIO.output(digit,GPIO.LOW)
         if digit == 16:
             an(1)
-            #aus()
+            aus()
         else:
             an(0)
-            #aus()     
+            aus()     
         GPIO.output(digit,GPIO.HIGH)
+
+        sleep(0.01)
     
     zeit2 = time()
 
