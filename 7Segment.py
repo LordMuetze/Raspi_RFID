@@ -84,4 +84,4 @@ while zeit2 - zeit1 < 10:
     zahl(1234)
     zeit2 = time()
 
- GPIO.cleanup()
+GPIO.cleanup()
