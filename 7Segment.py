@@ -41,6 +41,8 @@ def an(nummer):
     if nummer == 1:
         for index in eins:
             real_index = index-1
+            print("Index:\t"+str(index))
+            print("Real-Index\t"+str(real_index))
             GPIO.output(segments[real_index],GPIO.HIGH)
 
 def aus():
