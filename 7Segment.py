@@ -57,18 +57,9 @@ def zahl(zahl):
     zeit1 = time()
     zahl_str = str(abs(zahl))
 
-    if 0 <= zahl < 10:
-        zahl_str = "000" + zahl_str
-    elif 10 <= zahl < 100:
-        zahl_str = "00" + zahl_str
-    elif 100 <= zahl < 1000:
-        zahl_str = "0" + zahl_str
-    elif 1000 <= zahl < 10000:
-        pass
-    else:
+    if zahl < 0 or zahl > 9999:
         print("Sorry, diese Zahl kann nicht angezeigt werden")
 
-    print("zahl_str:\t"+zahl_str)
     i = 1
     for ch in zahl_str:
         an(ch,i)
