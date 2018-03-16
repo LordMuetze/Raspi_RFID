@@ -44,7 +44,7 @@ def an(nummer,anzeige=1):
 
     print("digits[anzeige-1]"+str(digits[anzeige-1]))
     GPIO.output(digits[anzeige-1],GPIO.LOW)
-    exec("for index in liste_"+str(nummer)+": real_index = index-1; GPIO.output(segments[real_index],GPIO.HIGH)")
+    exec("for index in liste"+str(nummer)+": real_index = index-1; GPIO.output(segments[real_index],GPIO.HIGH)")
     #GPIO.output(digits[anzeige-1],GPIO.HIGH)        
 
 def aus():
