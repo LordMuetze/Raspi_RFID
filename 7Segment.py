@@ -82,7 +82,7 @@ def zahl(zahl):
 zeit1 = time()
 zeit2 = time()        
 while zeit2 - zeit1 < 10:
-    zahl(123)
+    zahl(-123)
     zeit2 = time()
 
 GPIO.cleanup()
