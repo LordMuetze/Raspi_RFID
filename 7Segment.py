@@ -64,7 +64,7 @@ while zeit2 - zeit1 <= 30:
             aus()     
         GPIO.output(digit,GPIO.HIGH)
 
-        sleep(0.01)
+        sleep(0.1)
     
     zeit2 = time()
 
