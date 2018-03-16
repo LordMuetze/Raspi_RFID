@@ -12,6 +12,7 @@ liste_6 = [1,2,4,5,7,8]
 liste_7 = [4,6,8]
 liste_8 = [1,2,4,5,6,7,8]
 liste_9 = [2,4,5,6,7,8]
+liste_- = [5]
 
 
 
@@ -40,11 +41,12 @@ def an(nummer,anzeige=1):
     global liste_7
     global liste_8
     global liste_9
+    global liste_-
     global test
 
     print("digits[anzeige-1]"+str(digits[anzeige-1]))
     GPIO.output(digits[anzeige-1],GPIO.LOW)
-    exec("for index in liste"+str(nummer)+": real_index = index-1; GPIO.output(segments[real_index],GPIO.HIGH)")
+    exec("for index in liste_"+str(nummer)+": real_index = index-1; GPIO.output(segments[real_index],GPIO.HIGH)")
     #GPIO.output(digits[anzeige-1],GPIO.HIGH)        
 
 def aus():
