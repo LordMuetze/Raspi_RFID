@@ -58,8 +58,9 @@ def zahl(zahl):
 #    for ch in zahl_str:
         
 
-an(8,2)
-sleep(5)
-aus()
+for i in range(1,5):
+    an(i,i)
+    sleep(1)
+    aus()
 
 GPIO.cleanup()
