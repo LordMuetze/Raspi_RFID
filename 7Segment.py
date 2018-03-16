@@ -53,7 +53,7 @@ def aus():
 def zahl(zahl):
     zahl_str = str(zahl)
 
-    for ch in zahl_str:
+#    for ch in zahl_str:
         
 
 an(8,2)
