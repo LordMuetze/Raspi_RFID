@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from time import sleep
+from time import *
 import RPi.GPIO as GPIO
 
 liste_0 = [1,2,4,6,7,8]
@@ -49,13 +49,21 @@ def aus():
     for segment in segments:
         GPIO.output(segment,GPIO.LOW)
 
-for digit in digits:
-    GPIO.output(digit,GPIO.LOW)
-    for i in range(0,10):
-        an(i)
-        sleep(0.5)
-        aus()        
-    GPIO.output(digit,GPIO.HIGH)
+zeit1 = time()
+zeit2 = time()
+
+while zeit2 - zeit1 <= 30:
+        
+    for digit in digits:
+        GPIO.output(digit,GPIO.LOW)
+        if digit == 16:
+            an(1)
+            aus()
+        else:
+            an(0)
+            aus()     
+        GPIO.output(digit,GPIO.HIGH)
+    
+    zeit2 = time()
 
 GPIO.cleanup()
-
