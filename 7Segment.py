@@ -41,7 +41,6 @@ def an(nummer):
     if nummer == 1:
         for index in eins:
             GPIO.output(segments[index],GPIO.HIGH)
-    
 
 def aus():
     global segments
