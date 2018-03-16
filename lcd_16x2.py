@@ -59,9 +59,7 @@ LCD_E  = 19
 LCD_D4 = 13
 LCD_D5 = 6
 LCD_D6 = 5
-LCD_D7 = 15
-LED_ON = 15
-
+LCD_D7 = 11
 
 # Define some device constants
 LCD_WIDTH = 16    # Maximum characters per line
@@ -197,6 +195,7 @@ def lcd_string(message,line):
 if __name__ == '__main__':
 
   try:
+    print "Start"
     main()
   except KeyboardInterrupt:
     pass
@@ -204,3 +203,5 @@ if __name__ == '__main__':
     lcd_byte(0x01, LCD_CMD)
     lcd_string("Goodbye!",LCD_LINE_1)
     GPIO.cleanup()
+
+
