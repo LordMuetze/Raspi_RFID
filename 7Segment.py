@@ -40,7 +40,7 @@ def an(nummer):
     global liste_9
     global test
 
-    exec("for index in liste_"+str(nummer)+":; real_index = index-1; GPIO.output(segments[real_index],GPIO.HIGH)")
+    exec("for index in liste_"+str(nummer)+": real_index = index-1; GPIO.output(segments[real_index],GPIO.HIGH)")
             
 
 def aus():
