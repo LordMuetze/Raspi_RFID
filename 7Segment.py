@@ -12,6 +12,7 @@ sechs = [11,10,1,2,4,5]
 sieben = [11,7,4]
 acht = [11,7,4,2,1,5,10]
 neun = [10,11,7,5,4,2]
+test = [1,2,3,4,5,7,10,11]
 
 
 
@@ -38,8 +39,9 @@ def an(nummer):
     global sieben
     global acht
     global neun
+    global test
     if nummer == 1:
-        for index in eins:
+        for index in test:
             real_index = index-1
             print("Index:\t"+str(index))
             print("Real-Index\t"+str(real_index))
