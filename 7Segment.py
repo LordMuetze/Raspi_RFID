@@ -42,7 +42,7 @@ def an(nummer,anzeige=1):
     global liste_9
     global test
 
-    print(digits[anzeige-1])
+    print("digits[anzeige-1]"+str(digits[anzeige-1]))
     GPIO.output(digits[anzeige-1],GPIO.LOW)
     exec("for index in liste_"+str(nummer)+": real_index = index-1; GPIO.output(segments[real_index],GPIO.HIGH)")
     #GPIO.output(digits[anzeige-1],GPIO.HIGH)        
@@ -70,10 +70,10 @@ def zahl(zahl):
         zahl_str = "-" + zahl_str
     else:
         zahl_str = "0" + zahl_str
-    
+    print("zahl_str:\t"+zahl_str)
     i = 1
     for ch in zahl_str:
-        print (ch)
+        print ("ch:\t"+ch)
         an(ch,i)
         aus()
         i += 1
