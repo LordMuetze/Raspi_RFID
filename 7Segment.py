@@ -56,7 +56,9 @@ while True:
     for digit in digits:
         GPIO.output(digit,GPIO.LOW)
         an(1)
-
+        sleep(5)
         aus()
         
         GPIO.output(digit,GPIO.HIGH)
+
+        GPIO.cleanup()
