@@ -51,6 +51,8 @@ def aus():
     global segments
     for segment in segments:
         GPIO.output(segment,GPIO.LOW)
+    for digit in digits:
+        GPIO.output(digit,GPIO.HIGH)
 
 def zahl(zahl):
     zahl_str = str(zahl)
