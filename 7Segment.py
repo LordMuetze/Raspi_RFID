@@ -2,17 +2,16 @@
 from time import sleep
 import RPi.GPIO as GPIO
 
-null = [1,2,4,6,7,8]
-eins = [4,6]
-zwei = [1,2,5,6,8]
-drei = [2,4,5,6,8]
-vier = [4,5,6,7]
-fuenf = [2,4,5,7,8]
-sechs = [1,2,4,5,7,8]
-sieben = [4,6,8]
-acht = [1,2,4,5,6,7,8]
-neun = [2,4,5,6,7,8]
-punkt = [3]
+liste_0 = [1,2,4,6,7,8]
+liste_1 = [4,6]
+liste_2 = [1,2,5,6,8]
+liste_3 = [2,4,5,6,8]
+liste_4 = [4,5,6,7]
+liste_5 = [2,4,5,7,8]
+liste_6 = [1,2,4,5,7,8]
+liste_7 = [4,6,8]
+liste_8 = [1,2,4,5,6,7,8]
+liste_9 = [2,4,5,6,7,8]
 
 
 
@@ -29,23 +28,20 @@ for digit in digits:
 
 def an(nummer):
     global segments
-    global null
-    global eins
-    global zwei
-    global drei
-    global vier
-    global fuenf
-    global sechs
-    global sieben
-    global acht
-    global neun
+    global liste_0
+    global liste_1
+    global liste_2
+    global liste_3
+    global liste_4
+    global liste_5
+    global liste_6
+    global liste_7
+    global liste_8
+    global liste_9
     global test
-    if nummer == 1:
-        for index in eins:
-            real_index = index-1
-            print("Index:\t"+str(index))
-            print("Real-Index\t"+str(real_index))
-            GPIO.output(segments[real_index],GPIO.HIGH)
+
+    exec("for index in liste_"+str(nummer)+":; real_index = index-1; GPIO.output(segments[real_index],GPIO.HIGH)")
+            
 
 def aus():
     global segments
@@ -55,10 +51,10 @@ def aus():
 while True:
     for digit in digits:
         GPIO.output(digit,GPIO.LOW)
-        an(1)
-        sleep(5)
-        aus()
-        
+        for i in range(0,10):
+            an(i)
+            sleep(2)
+            aus(i)        
         GPIO.output(digit,GPIO.HIGH)
 
         GPIO.cleanup()
