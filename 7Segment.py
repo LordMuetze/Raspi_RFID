@@ -56,17 +56,8 @@ def zahl(zahl):
     for ch in zahl_str:
         
 
-while True:
-        
-    for digit in digits:
-        GPIO.output(digit,GPIO.LOW)
-        if digit == 16:
-            an(1)
-            aus()
-        else:
-            an(0)
-            aus()     
-        GPIO.output(digit,GPIO.HIGH) 
-
+an(8,2)
+sleep(2)
+aus()
 
 GPIO.cleanup()
