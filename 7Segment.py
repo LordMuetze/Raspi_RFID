@@ -73,6 +73,7 @@ def zahl(zahl):
     
     i = 1
     for ch in zahl_str:
+        print (ch)
         an(ch,i)
         aus()
         i += 1
