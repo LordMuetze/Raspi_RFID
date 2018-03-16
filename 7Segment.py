@@ -41,7 +41,7 @@ def an(nummer):
     global neun
     global test
     if nummer == 1:
-        for index in test:
+        for index in eins:
             real_index = index-1
             print("Index:\t"+str(index))
             print("Real-Index\t"+str(real_index))
