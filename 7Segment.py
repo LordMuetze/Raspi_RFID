@@ -54,6 +54,7 @@ def aus():
         GPIO.output(digit,GPIO.HIGH)
 
 def zahl(zahl):
+    zeit1 = time()
     zahl_str = str(abs(zahl))
 
     if 0 <= zahl < 10:
@@ -73,3 +74,5 @@ def zahl(zahl):
         an(ch,i)
         aus()
         i += 1
+    zeit2 = time()
+    print(zeit2-zeit1)
