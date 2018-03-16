@@ -54,7 +54,7 @@ while True:
         for i in range(0,10):
             an(i)
             sleep(2)
-            aus(i)        
+            aus()        
         GPIO.output(digit,GPIO.HIGH)
 
         GPIO.cleanup()
